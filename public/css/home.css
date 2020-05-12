@@ -52,22 +52,10 @@ header .logo .img-name {
 
 /* Navigation */
 header .nav {
+    padding-top: 2%;
+    padding-right: 5%;
     grid-column: 2/5;
     overflow: hidden;
-}
-header .nav ul {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-areas: "nav nav nav nav" "line line line line";
-    grid-auto-flow: row;
-    position: absolute;
-    float: right;
-    padding-right: 3%;
-}
-header .nav li {
-    list-style-type: none;
-    background: orange; /* debug only*/
-    padding-top: 10px;
 }
 header .nav li a {
     grid-area: nav;
@@ -78,53 +66,22 @@ header .nav li a {
     text-decoration: none;
 }
 
-/* underline */
-.one:hover ~ hr {
-    grid-area: line;
-    height: .25rem;
-    grid-column: 1;
-    transition: .3s ease-in-out;
-}  
-.two:hover ~ hr {
-    grid-area: line;
-    height: .25rem;
-    grid-column: 2;
-    transition: .3s ease-in-out;
-}  
-.three:hover ~ hr {
-    grid-area: line;
-    height: .25rem;
-    grid-column: 3;
-    transition: .3s ease-in-out;
+/* Navigation Underline Animation */
+header .nav li a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: relative;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
 }
-.four:hover ~ hr {
-    grid-area: line;
-    height: .25rem;
-    grid-column: 4;
-    transition: .3s ease-in-out;
-}
-hr {
-    width: 100%;
-    height: 0;
-    margin: 0;
-    margin-right: 73.5%;
-    background: tomato;
-    border: none;
-    transition: none;
-}
-
-@media only screen and (max-width: 1110px) {
-    header .nav ul {
-        float: right;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(4, 1fr);    
-        grid-template-areas: "nav" "nav" "nav" "nav";
-        grid-auto-flow: column;
-    }
-    hr {
-        transition: none;
-        height: 0px;
-    }
+header .nav li a:hover:after { 
+    width: 100%; 
+    left: 0; 
 }
 
 /*
