@@ -1,0 +1,151 @@
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: bold;;
+}
+
+@font-face {
+    font-family: "Karla";
+    src: url("/fonts/Karla-Regular.ttf");
+   }
+
+/*
+ *      -----------------------         Header      -----------------------
+ */
+header {
+    width: 100%;
+    height: 200px;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    grid-auto-rows: 250px;
+    margin-bottom: 100px;    
+    grid-gap: 8px;
+}
+.cell {
+  background: blue; /* debug only*/
+}
+
+/* Logo & Company name */
+header .logo {
+  grid-column: 1;
+  display: grid;
+  min-width: 300px;
+}
+header .logo .img-logo {
+    padding-left: 10%;
+    grid-column: 1;
+    max-width: 100%;
+    height: auto;
+    width: 80%;
+}
+header .logo .img-name {
+    padding-top: 5%;
+    padding-left: 0%;
+    grid-column: 2;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation */
+header .nav {
+    grid-column: 2/5;
+    overflow: hidden;
+}
+header .nav ul {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "nav nav nav nav" "line line line line";
+    grid-auto-flow: row;
+    float: right;
+    padding-right: 3%;
+}
+header .nav li {
+    list-style-type: none;
+    background: orange; /* debug only*/
+    padding-top: 10px;
+}
+header .nav li a {
+    grid-area: nav;
+    padding-right: 50px;
+    text-decoration: none;
+    color: black;
+    font-family: "Karla";
+    text-decoration: none;
+}
+
+/* underline */
+.one:hover ~ hr {
+    grid-area: line;
+    height: .25rem;
+    grid-column: 1;
+    transition: .3s ease-in-out;
+}  
+.two:hover ~ hr {
+    grid-area: line;
+    height: .25rem;
+    grid-column: 2;
+    transition: .3s ease-in-out;
+}  
+.three:hover ~ hr {
+    grid-area: line;
+    height: .25rem;
+    grid-column: 3;
+    transition: .3s ease-in-out;
+}
+.four:hover ~ hr {
+    grid-area: line;
+    height: .25rem;
+    grid-column: 4;
+    transition: .3s ease-in-out;
+}
+hr {
+    width: 100%;
+    height: 0;
+    margin: 0;
+    margin-right: 73.5%;
+    background: tomato;
+    border: none;
+    transition: none;
+}
+
+@media only screen and (max-width: 1110px) {
+    header .nav ul {
+        float: right;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);    
+        grid-template-areas: "nav" "nav" "nav" "nav";
+        grid-auto-flow: column;
+    }
+    hr {
+        transition: none;
+        height: 0px;
+    }
+}
+
+/*
+ *      -----------------------         Banner      -----------------------
+ */
+
+.banner {
+    background-color: aqua;
+    width: 100%;
+    height: 30vw;
+    text-align: center;
+}
+
+.banner p {
+    font-family: "Karla";
+    padding-top: 10%;
+}
+
+.banner h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.banner .shopify {
+    padding-left: 2%;
+}
+  
