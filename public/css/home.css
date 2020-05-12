@@ -60,6 +60,7 @@ header .nav ul {
     grid-gap: 20px;
     grid-template-areas: "nav nav nav nav" "line line line line";
     grid-auto-flow: row;
+    position: absolute;
     float: right;
     padding-right: 3%;
 }
