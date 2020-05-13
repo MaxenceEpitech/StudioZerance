@@ -103,7 +103,7 @@ header .nav li a:hover {
 .banner .shopify {
     margin-left: max(3vw, 10px);
 }
-.banner underline {
+underline {
     background: url("../img/underline.png") no-repeat;
     background-size: 100%;
     background-position: center 100%;
@@ -113,11 +113,10 @@ header .nav li a:hover {
  *      -----------------------         Portfolio      -----------------------
  */
 .portfolio {
-    padding-top: 20vh;
-    padding-bottom: 40vh;
+    padding-top: 10vh;
     background-color: black;
     text-align: center;
-    height: calc(100vh - 20vw);
+    height: max(45vw, 50vh);
     width: 100vw;
 }
 .portfolio h1 {
@@ -127,13 +126,82 @@ header .nav li a:hover {
     padding-bottom: 4vh;
 }
 .portfolio .logo {
-    width: 200px;
+    width: 15vw;
+    max-width: 300px;
 }
 
-.filterWhite { filter: brightness(0) invert(1); }
-.blur { filter: blur(3px); }
-.sepia { filter: sepia(100%); }
+/*
+ *      -----------------------         Slider      -----------------------
+ */
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 100 100'%3E%3Cpath d='M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z'/%3E%3C/svg%3E");
+    transform: rotate(180deg);
+    height: 30px;
+    width: 30px;
+}
+.carousel-control-next-icon:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='gold' viewBox='0 0 100 100'%3E%3Cpath d='M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z'/%3E%3C/svg%3E");
+    transform: rotate(180deg);
+    height: 40px;
+    width: 40px;
+}
+
+.from_scratch {
+    position: absolute;
+    text-align: center;
+    right: 15%;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: max(calc(500px - 35vw), max(400px, 25vw));
+    background: #fff;
+    padding: 2rem 3rem;
+}
+
+.from_scratch h4 {
+    margin-bottom: 2vw;
+    font-size: max(1vw, 10px);
+    font-family: "Karla";
+}
+.from_scratch img {
+    margin-bottom: 1vw;
+}
+.from_scratch h5 {
+    color: black;
+    display: inline;
+    font-family: "Karla";
+    font-style: inherit;
+}
+.from_scratch .description {
+    font-size: max(0.8vw, 15px);
+    font-family: Futura,sans-serif;
+}
+.from_scratch .see_more {
+    font-size: 1vw;
+    font-style: normal;
+}
+.from_scratch .see_more:hover {
+    text-decoration: none;
+    font-style: italic;
+}
 
 /*
- *      -----------------------         Portfolio      -----------------------
+ *      -----------------------         Infinite text      -----------------------
  */
+.infinite_text {
+    background-color: gold;
+    height: 7vh;
+    color: white;
+    font: "Karla";
+    font-weight: 700;
+    font-size: 2vh;
+}
+
+/*
+ *      -----------------------         Utils      -----------------------
+ */
+.filterBlack { filter: brightness(0); }
+.filterWhite { filter: brightness(0) invert(1); }
+.filterWhiteSepia { filter: sepia(100%) brightness(0) invert(1); }
+.blur { filter: blur(3px); }
+.sepia { filter: sepia(100%); }
