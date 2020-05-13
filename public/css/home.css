@@ -1,10 +1,9 @@
+/*      Copyright (C) Maxence Fourrier - All Rights Reserved
+ *      Unauthorized copying of this file, via any medium is strictly prohibited
+ *      Proprietary and confidential
+ *      Written by Maxence Fourrier <maxence.fourrier@gmail.com>, may 2020
+ */
 html {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-size: 24px;
-    font-weight: bold;;
 }
 
 @font-face {
@@ -17,49 +16,43 @@ html {
  */
 header {
     width: 100%;
-    height: 200px;
+    height: 30vh;
     display: grid;
     grid-auto-columns: 1fr;
     grid-auto-flow: column;
-    grid-auto-rows: 250px;
-    margin-bottom: 100px;    
+    grid-auto-rows: 20vh;
     grid-gap: 8px;
 }
 .cell {
-  background: blue; /* debug only*/
+  background: white; /* debug only*/
 }
 
 /* Logo & Company name */
 header .logo {
   grid-column: 1;
-  display: grid;
-  min-width: 300px;
+  padding-left: 5%;
+  padding-top: 5%;
+  background-color: white; /* debug only*/
+  min-width: 400px;
 }
 header .logo .img-logo {
-    padding-left: 10%;
-    grid-column: 1;
-    max-width: 100%;
-    height: auto;
-    width: 80%;
-}
-header .logo .img-name {
-    padding-top: 5%;
-    padding-left: 0%;
-    grid-column: 2;
-    max-width: 100%;
-    height: auto;
+    min-width: 290px;
 }
 
 /* Navigation */
 header .nav {
-    padding-top: 2%;
-    padding-right: 5%;
+    padding-top: 4vh;
+    padding-right: 5vw;
     grid-column: 2/5;
     overflow: hidden;
 }
+header .nav li {
+    padding-right: 2vw;
+    text-align: center;
+}
 header .nav li a {
+    font-size: min(calc(10px + 1vw), 25px);
     grid-area: nav;
-    padding-right: 50px;
     text-decoration: none;
     color: black;
     font-family: "Karla";
@@ -67,43 +60,80 @@ header .nav li a {
 }
 
 /* Navigation Underline Animation */
-header .nav li a:after {    
+header .nav li a:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
     display: block;
-    height: 2px;
+    height: 3px;
     left: 50%;
     position: relative;
-    background: #fff;
+    background: rgb(255,211,30);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
-header .nav li a:hover:after { 
+header .nav li a:hover:after {
+    background: rgb(255,211,30);
     width: 100%; 
     left: 0; 
+}
+header .nav li a:hover {
+    color: rgb(255,211,30);
 }
 
 /*
  *      -----------------------         Banner      -----------------------
  */
-
-.banner {
-    background-color: aqua;
-    width: 100%;
-    height: 30vw;
-    text-align: center;
+.banner {    
+    padding-bottom: 40vh;
 }
 
 .banner p {
     font-family: "Karla";
     padding-top: 10%;
+    font-size: max(1.2vw, 10px);
 }
 
 .banner h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    font-family: Futura,sans-serif;
+    font-weight: 600;
+    font-size: 4vw;
 }
 .banner .shopify {
-    padding-left: 2%;
+    margin-left: max(3vw, 10px);
+}
+.banner underline {
+    background: url("../img/underline.png") no-repeat;
+    background-size: 100%;
+    background-position: center 100%;
 }
   
+/*
+ *      -----------------------         Portfolio      -----------------------
+ */
+.portfolio {
+    padding-top: 20vh;
+    padding-bottom: 40vh;
+    background-color: black;
+    text-align: center;
+    height: calc(100vh - 20vw);
+    width: 100vw;
+}
+.portfolio h1 {
+    font-size: max(1.5vw, 20px);
+    color: white;
+    font-family: "Karla";
+    padding-bottom: 4vh;
+}
+.portfolio .logo {
+    width: 200px;
+}
+
+.filterWhite { filter: brightness(0) invert(1); }
+.blur { filter: blur(3px); }
+.sepia { filter: sepia(100%); }
+
+/*
+ *      -----------------------         Portfolio      -----------------------
+ */
