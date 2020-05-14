@@ -22,6 +22,7 @@ $> npm start
 ## Development time
 
 Total ~ 6h
+
 2h a day for 3 days
 
 ---
