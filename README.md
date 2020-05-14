@@ -21,12 +21,8 @@ $> npm start
 
 ## Development time
 
-Total ~= 4h40
-- Header ~= 1h30
-- Banner ~= 30m
-- Portfolio ~= 1h30
-- Slider ~= 1h
-- Infinit text ~= 10m
+Total ~ 6h
+2h a day for 3 days
 
 ---
 
